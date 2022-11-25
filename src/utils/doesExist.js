@@ -1,6 +1,6 @@
 import * as fs from 'fs/promises';
 
-export const folderExists = async (path) => {
+export const doesExist = async (path) => {
   try {
     await fs.access(path);
     return true;
