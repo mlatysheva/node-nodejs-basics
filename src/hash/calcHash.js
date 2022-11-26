@@ -1,4 +1,4 @@
-import crypto, { createHash } from 'crypto';
+import crypto from 'crypto';
 import { readFile } from 'fs/promises';
 import { getResolvedPath } from '../utils/getResolvedPath.js';
 
