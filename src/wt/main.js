@@ -1,10 +1,12 @@
 import { Worker } from 'worker_threads';
 import { getResolvedPath } from '../utils/getResolvedPath.js';
 import os from 'os';
+import { fileURLToPath } from 'url';
 
-const workerFile = 'wt/worker.js';
 
 const performCalculations = async () => {
+  const _filename = fileURLToPath(import.meta.url);
+  const workerFile = getResolvedPath(_filename, 'worker.js');
   const cpuCores = os.cpus().length;
   
   console.log(`Running with ${cpuCores} CPU cores...`);
@@ -13,7 +15,7 @@ const performCalculations = async () => {
   
   for (let core = 0; core < cpuCores; core++) {
     const workerPromise = new Promise((resolve, reject) => {
-      const worker = new Worker(getResolvedPath(workerFile), { workerData: { n: 10 + core }});
+      const worker = new Worker(workerFile, { workerData: { n: 10 + core }});
       worker.on('message', msg => resolve(msg));
       worker.on('error', err => reject(err));
     })
