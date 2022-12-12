@@ -1,6 +1,28 @@
-# Node.js basics
+# Node.js basics operations
 
-## A simple node.js app demonstrating basic node.js operations
+## A simple node.js app demonstrating basic node.js operations:
+- create, copy, rename and delete a file
+- list the content of a directory
+- read the content of a file and log it to the console
+- parse environment variables
+- parse command line arguments
+- calculate hash for a given file
+- read, write and transform data with Readable Stream, Writeable Stream and Transform Stream APIs
+- compress and decompress files with gzip
+- distribute heavy calculation task among worker processes
+- spawn a child process, pass arguments to it and exchange input/output data between the parent and child processes
+
+## Stack used:
+- Node.js
+- Stream API
+- gzip
+- worker_threads
+- child_process
+
+## Installation
+1. `git clone https://github.com/mlatysheva/node-nodejs-basics.git` to clone the repository to your local machine
+2. `cd` into the cloned repository
+3. run commands listed in `package.json` to execute the above operations by `npm run [command name]`
 
 ### File system (src/fs)
 
