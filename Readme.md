@@ -19,6 +19,8 @@
 - worker_threads
 - child_process
 
+![Running commands in cli](screenshots/screenshot_cli.png)
+
 ## Installation
 1. `git clone https://github.com/mlatysheva/node-nodejs-basics.git` to clone the repository to your local machine
 2. `cd` into the cloned repository
